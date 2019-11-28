@@ -27,10 +27,10 @@ public class MybatisPlusConfig {
      * Sequence主键
      * @return
      */
-    @Bean
-    public GlobalConfiguration globalConfiguration() {
-        GlobalConfiguration configuration = new GlobalConfiguration();
-        configuration.setKeyGenerator((IKeyGenerator) new OracleKeyGenerator());
-        return configuration;
-    }
+//    @Bean
+//    public GlobalConfiguration globalConfiguration() {
+//        GlobalConfiguration configuration = new GlobalConfiguration();
+//        configuration.setKeyGenerator((IKeyGenerator) new OracleKeyGenerator());
+//        return configuration;
+//    }
 }

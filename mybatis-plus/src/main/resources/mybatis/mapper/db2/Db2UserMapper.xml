@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zql.mybatisplus.mapper.db2.Db2UserMapper">
-    <select id="selectUserById" resultType="com.zql.mybatisplus.entity.db2.UserDb2" parameterType="int">
-        select * from user where id = #{id}
-    </select>
+<mapper namespace="com.zql.mybatisplus.mapper.db2.Db1UserMapper">
+<!--    <select id="selectUserById" resultType="com.zql.mybatisplus.entity.db2.UserDb2" parameterType="int">-->
+<!--        select * from user where id = #{id}-->
+<!--    </select>-->
 </mapper>
