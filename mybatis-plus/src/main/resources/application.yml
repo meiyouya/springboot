@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    db1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://39.108.92.8:3306/test?useSSL=false
+      username: root
+      password: 521xwl54zql@MYSQL
+    db2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://39.108.92.8:3306/plan?useSSL=false
+      username: root
+      password: 521xwl54zql@MYSQL

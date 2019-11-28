@@ -1,0 +1,4 @@
+# Project exclude paths
+/lawliet-spring-boot-starter/target/
+/starter-test/target/
+/thread-pool/target/

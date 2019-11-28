@@ -1,0 +1,4 @@
+sms-config:
+  account-sid: sid
+  auth-token: token
+  app-id: appId
