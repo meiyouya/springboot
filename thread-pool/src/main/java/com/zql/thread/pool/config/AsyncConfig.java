@@ -28,7 +28,7 @@ public class AsyncConfig implements AsyncConfigurer {
         // 如果执行数超过最大线程数，调用者的线程会执行该任务，一般的并发情况不需要这个参数
         // taskExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         // 配置线程池中的线程名的前缀，默认为ThreadPoolTaskExecutor - x
-        executor.setThreadNamePrefix("thread-name");
+        executor.setThreadNamePrefix("thread-name-");
         executor.initialize();
         return executor;
     }
