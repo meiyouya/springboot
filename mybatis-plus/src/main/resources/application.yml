@@ -2,7 +2,7 @@ spring:
   datasource:
 #    db1:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    jdbc-url: jdbc:mysql://localhost:3307/dg?useSSL=false
+    url: jdbc:mysql://127.0.0.1:3307/dg?useSSL=false
     username: allsale_prod
     password: allsale@12345
 #db2:
@@ -10,3 +10,6 @@ spring:
         ##      jdbc-url: jdbc:mysql://39.108.92.8:3306/plan?useSSL=false
       ##      username: root
       ##      password: 521xwl54zql@MYSQL
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true

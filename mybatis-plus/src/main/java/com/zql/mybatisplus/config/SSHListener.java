@@ -2,12 +2,13 @@ package com.zql.mybatisplus.config;
 
 import com.jcraft.jsch.JSchException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-@WebListener
+@Component
 @Slf4j
 public class SSHListener implements ServletContextListener {
 
