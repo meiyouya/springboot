@@ -1,0 +1,29 @@
+spring:
+  quartz:
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: clusteredScheduler
+            instanceId: AUTO
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            isClustered: true
+            clusterCheckinInterval: 10000
+            useProperties: false
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+          dataSource: quartzDB
+    # 任务存储类型，有jdbc和memory两个值可供选择，选择jdbc模式就是会把定时任务存储在数据库汇总
+    job-store-type: jdbc
+  datasource:
+    url: jdbc:mysql://106.12.142.19:3306/quartz
+    name: quartzDB
+    username: root
+    password: mysql@BD1
+    driver-class-name: com.mysql.cj.jdbc.Driver
