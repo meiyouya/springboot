@@ -36,6 +36,7 @@
         <module>docker</module>
         <module>xxl-job</module>
         <module>thread-pool</module>
+        <module>druid</module>
     </modules>
 
     <dependencies>

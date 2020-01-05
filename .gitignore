@@ -2,3 +2,4 @@
 /lawliet-spring-boot-starter/target/
 /starter-test/target/
 /thread-pool/target/
+/druid/.mvn/wrapper/
