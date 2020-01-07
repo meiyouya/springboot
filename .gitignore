@@ -3,3 +3,4 @@
 /starter-test/target/
 /thread-pool/target/
 /druid/.mvn/wrapper/
+/druid/druid.iml
