@@ -4,3 +4,4 @@
 /thread-pool/target/
 /druid/.mvn/wrapper/
 /druid/druid.iml
+/thread-pool/thread-pool.iml
