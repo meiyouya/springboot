@@ -37,6 +37,7 @@
         <module>xxl-job</module>
         <module>thread-pool</module>
         <module>druid</module>
+        <module>design-pattern</module>
     </modules>
 
     <dependencies>
