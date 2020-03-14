@@ -1,4 +1,4 @@
-package com.lawliet.starter.test.config;
+package com.zql.springboot.redis.config;
 
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;

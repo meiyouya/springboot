@@ -1,4 +1,4 @@
-package com.lawliet.starter.test;
+package com.zql.springboot.redis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

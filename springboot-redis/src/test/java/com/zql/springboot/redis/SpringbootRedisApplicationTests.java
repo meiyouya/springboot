@@ -1,6 +1,6 @@
-package com.lawliet.starter.test;
+package com.zql.springboot.redis;
 
-import com.lawliet.starter.test.entity.User;
+import com.zql.springboot.redis.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

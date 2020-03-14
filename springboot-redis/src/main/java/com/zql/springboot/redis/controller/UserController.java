@@ -1,6 +1,6 @@
-package com.lawliet.starter.test.controller;
+package com.zql.springboot.redis.controller;
 
-import com.lawliet.starter.test.entity.User;
+import com.zql.springboot.redis.entity.User;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

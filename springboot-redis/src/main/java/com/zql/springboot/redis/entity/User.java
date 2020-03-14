@@ -1,4 +1,4 @@
-package com.lawliet.starter.test.entity;
+package com.zql.springboot.redis.entity;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.lawliet.starter.test;
+package com.zql.springboot.redis;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

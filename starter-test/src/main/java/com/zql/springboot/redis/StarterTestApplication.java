@@ -1,4 +1,4 @@
-package com.lawliet.starter.test;
+package com.zql.springboot.redis;
 
 import com.lawliet.starter.SmsService;
 import com.lawliet.starter.dto.SmsSendDTO;
@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
