@@ -27,12 +27,12 @@ public class GrabOrderController {
         return JedisUtils.setnx(key, value);
     }
 
-    @GetMapping("/grab")
+    @GetMapping
     public List<String> grab() {
 
         // 模拟10万个用户
         ArrayList<String> users = new ArrayList<>();
-        IntStream.range(0, 100000).parallel().forEach(u -> {
+        IntStream.range(0, 300000).parallel().forEach(u -> {
             users.add("客户--" + u);
         });
 
