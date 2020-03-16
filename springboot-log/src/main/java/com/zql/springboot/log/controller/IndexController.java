@@ -15,7 +15,9 @@ public class IndexController {
 
     @GetMapping
     public String index() {
-        log.info("hello");
+        log.debug("debug log");
+        log.info("info log");
+        log.error("error log");
         return "Hello";
     }
 }
