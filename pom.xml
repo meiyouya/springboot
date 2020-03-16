@@ -38,6 +38,7 @@
         <module>thread-pool</module>
         <module>druid</module>
         <module>design-pattern</module>
+        <module>springboot-log</module>
     </modules>
 
     <dependencies>
