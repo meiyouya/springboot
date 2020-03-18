@@ -10,6 +10,12 @@ public class JedisUtils {
 
     private static JedisPool jedisPool = new JedisPool();
 
+    /**
+     * 获取锁
+     * @param key
+     * @param value
+     * @return
+     */
     public static boolean setnx(String key, String value) {
         Jedis jedis = null;
         try {
@@ -29,6 +35,12 @@ public class JedisUtils {
         return false;
     }
 
+    /**
+     * 释放锁
+     * @param key
+     * @param value
+     * @return
+     */
     public static int delnx(String key, String value) {
         Jedis jedis = null;
         try {
