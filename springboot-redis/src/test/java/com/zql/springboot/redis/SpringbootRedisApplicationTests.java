@@ -1,6 +1,8 @@
 package com.zql.springboot.redis;
 
+import cn.hutool.core.lang.UUID;
 import com.zql.springboot.redis.entity.User;
+import com.zql.springboot.redis.util.RedisService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,9 @@ public class SpringbootRedisApplicationTests {
 
     @Autowired
     private RedisTemplate redisTemplate;
+
+    @Autowired
+    private RedisService redisService;
 
     /**
      * 操作字符串
@@ -53,4 +58,16 @@ public class SpringbootRedisApplicationTests {
     public void test03() {
         System.out.println(redisTemplate.opsForValue().get("user-key"));
     }
+
+    @Test
+    public void test04() throws InterruptedException {
+//        System.out.println(redisService.set("key", "value"));
+        System.out.println(redisService.setKeyAndExpire("key2", "value2", 1L));
+        System.out.println(redisService.get("key2"));
+//        System.out.println(redisService.setExpire("key", 1L));
+//        System.out.println(redisService.get("key"));
+        Thread.sleep(2000);
+        System.out.println(redisService.get("key2"));
+    }
+
 }
