@@ -39,6 +39,7 @@
         <module>druid</module>
         <module>design-pattern</module>
         <module>springboot-log</module>
+        <module>springboot-i18n</module>
     </modules>
 
     <dependencies>
