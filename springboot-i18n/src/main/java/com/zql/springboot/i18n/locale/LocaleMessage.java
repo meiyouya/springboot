@@ -17,10 +17,10 @@ public class LocaleMessage {
     private MessageSource messageSource;
 
     public String getMessage(String key) {
-        return this.getMessage(key, new Object[]{});
+        return messageSource.getMessage(key, null, LocaleContextHolder.getLocale());
     }
 
-    public String getMessage(String key, String defaultMessage) {
+    /*public String getMessage(String key, String defaultMessage) {
         return this.getMessage(key, null, defaultMessage);
     }
 
@@ -46,5 +46,5 @@ public class LocaleMessage {
 
     public String getMessage(String key, Object[] args, String defaultMessage, Locale locale) {
         return messageSource.getMessage(key, args, defaultMessage, locale);
-    }
+    }*/
 }
