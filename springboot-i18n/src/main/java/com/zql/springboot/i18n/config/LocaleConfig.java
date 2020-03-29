@@ -17,6 +17,10 @@ import java.util.Locale;
 @Configuration
 public class LocaleConfig {
 
+    /**
+     * 设置默认语言，当语言参数为空时，则读取默认语言
+     * @return
+     */
     @Bean
     public LocaleResolver localeResolver() {
         SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
@@ -24,6 +28,11 @@ public class LocaleConfig {
         return sessionLocaleResolver;
     }
 
+    /**
+     * 定义识别语言类型的参数名
+     * 拦截器会根据此参数的值读取语言类型
+     * @return
+     */
     @Bean
     public WebMvcConfigurer webMvcConfigurer() {
         return new WebMvcConfigurer() {
