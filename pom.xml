@@ -40,6 +40,7 @@
         <module>design-pattern</module>
         <module>springboot-log</module>
         <module>springboot-i18n</module>
+        <module>quartz</module>
     </modules>
 
     <dependencies>

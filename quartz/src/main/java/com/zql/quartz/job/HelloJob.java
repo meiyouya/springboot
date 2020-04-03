@@ -1,22 +1,24 @@
 package com.zql.quartz.job;
 
 import lombok.extern.slf4j.Slf4j;
-import org.quartz.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.quartz.DisallowConcurrentExecution;
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+import org.springframework.scheduling.quartz.QuartzJobBean;
 
-import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @author dell
+ */
 @DisallowConcurrentExecution
 @Slf4j
-public class HelloJob implements Job, Serializable {
-
-    @Autowired
-    private Scheduler scheduler;
+public class HelloJob extends QuartzJobBean {
 
     @Override
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+    protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         log.info("Hello Job执行--------->" + new Date());
     }
 }
