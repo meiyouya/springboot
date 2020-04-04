@@ -23,6 +23,10 @@ public class Result<T> implements Serializable {
     private T data;
 
     public static <T> Result<T> success(T data) {
-        return new Result<>(200, "操作成功", data);
+        return Result.<T>builder().code(200).msg("操作成功").data(data).build();
+    }
+
+    public static <T> Result<T> fail(String message) {
+        return Result.<T>builder().code(0).msg(message).build();
     }
 }

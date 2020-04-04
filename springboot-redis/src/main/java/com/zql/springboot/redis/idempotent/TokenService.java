@@ -3,6 +3,7 @@ package com.zql.springboot.redis.idempotent;
 import cn.hutool.core.lang.UUID;
 import cn.hutool.core.util.StrUtil;
 import com.zql.springboot.redis.constants.Constants;
+import com.zql.springboot.redis.exception.BusinessException;
 import com.zql.springboot.redis.util.RedisService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,16 +44,16 @@ public class TokenService {
      * @param request
      * @return
      */
-    public boolean checkToken(HttpServletRequest request) {
+    public boolean checkToken(HttpServletRequest request) throws BusinessException {
         String headerToken = request.getHeader(Constants.Token.HEADER_TOKEN_NAME);
         if (StrUtil.isEmpty(headerToken)) {
-            return false;
+            throw new BusinessException(401, "未传递幂等校验token");
         }
         if (!redisService.exists(headerToken)) {
-            return false;
+            throw new BusinessException(101, "重复请求，已拒绝");
         }
         if (!redisService.remove(headerToken)) {
-            return false;
+            throw new BusinessException(101, "重复请求，已拒绝");
         }
         return true;
     }
