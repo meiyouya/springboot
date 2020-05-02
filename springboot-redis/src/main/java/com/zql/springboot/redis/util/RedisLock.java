@@ -1,6 +1,7 @@
 package com.zql.springboot.redis.util;
 
 import cn.hutool.core.util.StrUtil;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -12,10 +13,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
+@AllArgsConstructor
 public class RedisLock {
 
-    @Autowired
-    private StringRedisTemplate stringRedisTemplate;
+    private final StringRedisTemplate stringRedisTemplate;
 
     /**
      * 获取锁
