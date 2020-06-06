@@ -40,7 +40,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.requestMatchers().anyRequest()
           .and()
           .authorizeRequests()
-          .antMatchers("/oauth/**").permitAll();
+          .antMatchers("/oauth/**").permitAll()
+          .and().csrf().disable();  // 禁用Spring Security自带的跨域处理
     }
 
     // 替换AuthenticationManager方式
