@@ -1,9 +1,6 @@
 package com.zql.mybatisplus.service.impl;
 
-import cn.hutool.core.net.NetUtil;
 import cn.hutool.core.util.ObjectUtil;
-import cn.hutool.extra.servlet.ServletUtil;
-import cn.hutool.http.HttpUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zql.mybatisplus.entity.ResourceLock;
 import com.zql.mybatisplus.mapper.MysqlLockMapper;
@@ -11,11 +8,7 @@ import com.zql.mybatisplus.service.MysqlLockService;
 import com.zql.mybatisplus.util.IpUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.support.RequestContext;
 
-import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
 
 /**
